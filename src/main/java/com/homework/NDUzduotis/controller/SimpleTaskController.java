@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+//SimpleTaskController class used for SimpleTask endpoints that don't require authentication
 @RestController
 @RequestMapping("/api/public/tasks")
 @RequiredArgsConstructor

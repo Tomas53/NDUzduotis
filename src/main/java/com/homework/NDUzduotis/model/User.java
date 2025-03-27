@@ -6,7 +6,11 @@ import lombok.*;
 
 import java.util.List;
 
-
+/**
+ * Entity representing a user structure.
+ * Contains user authentication details and manages user-specific tasks.
+ * Each user can have multiple tasks, and tasks are cascade-managed by the user entity.
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

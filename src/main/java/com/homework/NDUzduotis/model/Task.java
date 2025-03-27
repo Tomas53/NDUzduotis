@@ -6,6 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Entity representing a user-specific task in the application.
+ * Unlike SimpleTask, this entity is tied to a specific user and requires authentication to access.
+ */
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor

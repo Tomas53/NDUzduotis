@@ -10,8 +10,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+//Service responsible for mapping between User entities and DTOs.
 @Service
 public class UserMapper {
+
+    //Converts a UserDto to a User entity, including associated tasks.
     public static User dtoToEntity(final UserDto userDto) {
         User user = new User();
         user.setUsername(userDto.getUsername());
@@ -24,6 +27,7 @@ public class UserMapper {
         return user;
     }
 
+    //Converts a User entity to a UserDto, including all associated tasks.
     public static UserDto entityToDto(final User user) {
         UserDto userDto = new UserDto();
         userDto.setUsername(user.getUsername());

@@ -4,9 +4,10 @@ import com.homework.NDUzduotis.model.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-import java.util.Optional;
-
+/**
+ * Provides standard JPA operations for user-specific task management.
+ * Handles tasks that are associated with users and require authentication to access.
+ */
 @Repository
 public interface TaskRepository extends JpaRepository<Task, Long> {
 }

@@ -7,9 +7,11 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+//Service responsible for mapping between Task entities and DTOs.
 @Service
 @RequiredArgsConstructor
 public class TaskMapper {
+    //Converts a TaskDto to a Task entity and associates it with a user.
     public Task dtoToEntity(TaskDto taskDto, User user) {
         Task task = new Task();
         task.setTitle(taskDto.getTitle());
@@ -19,6 +21,7 @@ public class TaskMapper {
         return task;
     }
 
+    //Converts a Task entity to a TaskDto for client-side use.
     public TaskDto entityToDto(Task task) {
         TaskDto taskDto = new TaskDto();
         taskDto.setTitle(task.getTitle());

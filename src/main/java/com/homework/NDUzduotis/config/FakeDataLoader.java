@@ -11,7 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
-
+//FakeDataLoader class to populate H2 database with sample data
 @Component
 @RequiredArgsConstructor
 public class FakeDataLoader implements CommandLineRunner {
@@ -20,6 +20,7 @@ public class FakeDataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        //Adding user tomas and creating new tasks for him
         User tomas = new User(null, "tomas", passwordEncoder.encode("tomas"), Role.USER, null);
         Task tomasTask1 = new Task(null, "Do groceries", Status.PENDING, "Buy milk", tomas);
         Task tomasTask2 = new Task(null, "Tidy room", Status.PENDING, "Do the vacuuming and tidy your bed", tomas);
@@ -28,6 +29,7 @@ public class FakeDataLoader implements CommandLineRunner {
 
         userRepository.save(tomas);
 
+        //Adding user jonas and creating new tasks for him
         User jonas = new User(null, "jonas", passwordEncoder.encode("jonas"), Role.USER, null);
         Task jonasTask1 = new Task(null, "Do sports", Status.PENDING, "play basketball", jonas);
         Task jonasTask2 = new Task(null, "Fix car", Status.PENDING, "Change oil", jonas);
@@ -35,6 +37,5 @@ public class FakeDataLoader implements CommandLineRunner {
         jonas.setTasks(Arrays.asList(jonasTask1, jonasTask2));
 
         userRepository.save(jonas);
-        System.out.println("Command runner works");
     }
 }

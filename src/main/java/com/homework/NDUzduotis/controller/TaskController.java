@@ -1,14 +1,12 @@
 package com.homework.NDUzduotis.controller;
 
 import com.homework.NDUzduotis.dto.TaskDto;
-import com.homework.NDUzduotis.model.Task;
-import com.homework.NDUzduotis.service.TaskMapper;
 import com.homework.NDUzduotis.service.TaskService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+// TaskController class with endpoints that require authentication
 @RestController
 @RequestMapping("/api/tasks")
 @RequiredArgsConstructor

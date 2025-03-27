@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+//User DTO used for transferring user data between application layers and client-side interactions.
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

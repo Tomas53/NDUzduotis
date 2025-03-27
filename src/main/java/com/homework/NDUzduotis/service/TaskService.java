@@ -24,6 +24,7 @@ public class TaskService {
     private final UserRepository userRepository;
     private final TaskMapper taskMapper;
 
+    //Retrieves all tasks for the currently authenticated user.
     public List<TaskDto> getTasksByUser() {
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -39,6 +40,7 @@ public class TaskService {
         return UserMapper.entityToDto(user).getTasks();
     }
 
+    //Creates a new task for the currently authenticated user.
     public TaskDto createTaskByUser(TaskDto taskDto) {
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -52,6 +54,7 @@ public class TaskService {
         return taskMapper.entityToDto(taskRepository.save(task));
     }
 
+    //Retrieves a specific task by ID if it belongs to the current user.
     public Optional<TaskDto> getTaskById(Long id) {
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -66,6 +69,7 @@ public class TaskService {
         return Optional.of(taskMapper.entityToDto(task));
     }
 
+    //Retrieves all tasks with a specific status for the current user.
     public Optional<List<TaskDto>> getTasksByStatus(String status) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentUsername = authentication.getName();
@@ -91,6 +95,7 @@ public class TaskService {
         return Optional.of(filteredTasks);
     }
 
+    //Updates a task if it belongs to the current user.
     public Optional<TaskDto> updateTaskById(Long id, TaskDto taskDto) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username = authentication.getName();
