@@ -4,11 +4,10 @@ Task (ToDo) Spring Boot API for task management with both public and authenticat
 
 ## Prerequisites
 
-Java 17 or higher
-Gradle (or use the included Gradle wrapper)
-Git for version control
-Postman for testing the API endpoints
-A database (the application is configured to use H2 in-memory database by default)
+1. Java 17 or higher
+2. Gradle (or use the included Gradle wrapper)
+3. Git for version control
+4. Postman for testing the API endpoints
 
 ## Getting Started
 
