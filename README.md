@@ -38,9 +38,9 @@ Steps to test the API endpoints using Postman.
 - **Body** (JSON):
 ```json
 {
-  "title": "Sample Task",
-  "description": "This is a sample task description",
-  "status": "PENDING"
+  "title": "Water the flowers (Example)",
+  "status": "PENDING",
+  "description": "Water all flowers at home (This is a example task description)"  
 }
 ```
 
@@ -51,9 +51,9 @@ Steps to test the API endpoints using Postman.
 - **Body** (JSON):
 ```json
 {
-  "title": "Updated Task Clean your room",
-  "description": "Clean your desk and do vacuuming. (This task has been updated)",
-  "status": "IN_PROGRESS"
+  "title": "Clean your room (Updated Task)",
+  "status": "IN_PROGRESS",
+  "description": "Clean your desk and tidy bed. (This task has been updated)"
 }
 ```
 
@@ -98,8 +98,8 @@ For these endpoints, you'll need to use Basic Authentication in Postman.
 ```json
 {
   "title": "Fix car",
-  "description": "Change tires",
-  "status": "PENDING"
+  "status": "PENDING",
+  "description": "Change tires"
 }
 ```
 
@@ -112,8 +112,8 @@ For these endpoints, you'll need to use Basic Authentication in Postman.
 ```json
 {
   "title": "Fix car. (Updated Personal Task)",
-  "description": "Change tires. (This personal task has been updated)",
-  "status": "COMPLETED"
+  "status": "COMPLETED",
+  "description": "Change tires. (This personal task has been updated)"
 }
 ```
 
