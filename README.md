@@ -1,6 +1,14 @@
-# TODO API (Homework task)
+# Task (ToDo) API (Homework task)
 
-TODO Spring Boot API for task management with both public and authenticated endpoints.
+Task (ToDo) Spring Boot API for task management with both public and authenticated endpoints.
+
+## Prerequisites
+
+Java 17 or higher
+Gradle (or use the included Gradle wrapper)
+Git for version control
+Postman for testing the API endpoints
+A database (the application is configured to use H2 in-memory database by default)
 
 ## Getting Started
 
