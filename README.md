@@ -72,6 +72,10 @@ For these endpoints, you'll need to use Basic Authentication in Postman.
 3. Enter your username and password
 4. Click "Send" to make the request
 
+For example:
+![image](https://github.com/user-attachments/assets/e01d56cf-9b30-44fa-9991-49f890cd6994)
+
+
 #### Get user tasks
 - **Method**: GET
 - **URL**: `http://localhost:8080/api/tasks`
